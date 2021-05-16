@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/mainColor"
+        tools:context=".activities.InfoPropertiesActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/button_backX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_close_24_white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/number_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:text="@string/number_title"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/number_parity"/>
+
+                    <TextView
+                        android:id="@+id/even_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:text="EVEN"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/browser_actions_bg_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:text="@string/binary_title"/>
+
+                    <TextView
+                        android:id="@+id/binary_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="1010101101010110101010101010101010"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/octal_title"/>
+
+                    <TextView
+                        android:id="@+id/octal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:text="623517467164"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/hexadecimal_title"/>
+
+                    <TextView
+                        android:id="@+id/hexadecimal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:text="2540BE3FF"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/browser_actions_bg_grey"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/perfect_square_title"/>
+
+                    <TextView
+                        android:id="@+id/perfect_square_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:text="True"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/square_root_title"/>
+
+                    <TextView
+                        android:id="@+id/square_root_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:text="170.3033030"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/browser_actions_bg_grey"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/fibonacci_title"/>
+
+                    <TextView
+                        android:id="@+id/fibonacci_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:text="True"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:text="@string/left_fibonacci_title"/>
+
+                    <TextView
+                        android:id="@+id/left_fib_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:text="2540424"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:text="@string/right_fibonacci_title"/>
+
+                    <TextView
+                        android:id="@+id/right_fib_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:text="254025435331F"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/browser_actions_bg_grey"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/prime_title"/>
+
+                    <TextView
+                        android:id="@+id/prime_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:layout_toStartOf="@id/watch_prime"
+                        android:text="True"/>
+
+                    <ImageButton
+                        android:id="@+id/watch_prime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_baseline_remove_red_eye_24_gray"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/semi_prime_number"/>
+
+                    <TextView
+                        android:id="@+id/semi_prime_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:layout_toStartOf="@id/watch_semi_prime"
+                        android:text="True"/>
+
+                    <ImageButton
+                        android:id="@+id/watch_semi_prime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_baseline_remove_red_eye_24_gray"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/browser_actions_bg_grey"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/white"
+                        android:text="@string/rgb_title"/>
+
+                    <View
+                        android:id="@+id/color_back"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/white"/>
+
+
+                </RelativeLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/browser_actions_bg_grey"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>

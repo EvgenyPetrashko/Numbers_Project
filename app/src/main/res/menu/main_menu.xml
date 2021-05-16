@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/nav_number_info"
+        android:id="@+id/menu_info"
+        android:icon="@drawable/infinity"/>
+   <!-- <item android:title="@string/nav_gym"
+        android:id="@+id/menu_gym"
+        android:icon="@drawable/brain"/>-->
+    <item android:title="@string/nav_properties"
+        android:id="@+id/menu_properties"
+        android:icon="@drawable/square_root"/>
+    <item android:title="@string/nav_algorithms"
+        android:id="@+id/menu_algorithms"
+        android:icon="@drawable/algorithms"/>
+    <item android:title="@string/nav_lottery"
+        android:id="@+id/menu_lottery"
+        android:icon="@drawable/coin"/>
+    <item android:title="@string/nav_full_version"
+        android:id="@+id/menu_full_version"
+        android:icon="@drawable/speaker"/>
+</menu>

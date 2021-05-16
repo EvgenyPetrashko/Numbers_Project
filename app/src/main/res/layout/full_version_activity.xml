@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/mainColor">
+
+    <ImageButton
+        android:id="@+id/fv_close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_close_24_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/function_growing"
+            android:layout_gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/fv_point_1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/fv_point_shape"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:text="@string/fv_no_ads"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/fv_point_1"
+                android:layout_marginStart="10dp"/>
+
+        </RelativeLayout>
+
+     <!-- <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center">
+
+          <View
+              android:id="@+id/fv_point_2"
+              android:layout_width="10dp"
+              android:layout_height="10dp"
+              android:background="@drawable/fv_point_shape"
+              android:layout_centerVertical="true"
+              android:layout_alignParentStart="true"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/white"
+              android:textSize="24sp"
+              android:text="@string/fv_full_access"
+              android:layout_toEndOf="@id/fv_point_2"
+              android:layout_marginStart="10dp"
+              android:layout_centerVertical="true"
+              android:layout_gravity="center"
+              android:gravity="center"/>
+
+      </RelativeLayout>-->
+
+        <Button
+            android:id="@+id/buy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:text="@string/fv_upgrade"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

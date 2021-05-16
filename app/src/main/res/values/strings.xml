@@ -1,0 +1,434 @@
+<resources>
+    <string name="app_name">Numbers</string>
+    <string name="enter_number_title">Enter the number:</string>
+    <string name="start_button">Start</string>
+    <string name="nav_draw_close">Close</string>
+    <string name="nav_draw_open">Open</string>
+    <string name="app_header">Numbers and their properties</string>
+    <string name="nav_number_info">Number Information</string>
+    <string name="nav_gym">Check yourself</string>
+    <string name="nav_lottery">Lottery</string>
+    <string name="nav_properties">Properties</string>
+    <string name="nav_algorithms">Algorithms</string>
+    <string name="nav_full_version">Full Version</string>
+
+    <!--Info_Prop_List_Fragment-->
+    <string name="number_title">Number: </string>
+    <string name="number_parity">Parity: </string>
+    <string name="binary_title">Binary: </string>
+    <string name="octal_title">Octal: </string>
+    <string name="hexadecimal_title">Hexadecimal: </string>
+    <string name="perfect_square_title">Is Perfect Square: </string>
+    <string name="square_root_title">Square root: </string>
+    <string name="fibonacci_title">Is Fibonacci number: </string>
+    <string name="left_fibonacci_title">Left Fibonacci Number: </string>
+    <string name="right_fibonacci_title">Right Fibonacci Number: </string>
+    <string name="prime_title">Is Prime Number: </string>
+    <string name="semi_prime_number">Is Semi-Prime Number: </string>
+    <string name="semi_yes_result">True </string>
+    <string name="semi_no_result">False</string>
+    <string name="rgb_title">RGB: </string>
+  <!--  <string name="pro_number_types">Is Deficient/Abundant/Perfect number:</string>
+    <string name="pro_deficient_type">Deficient</string>
+    <string name="pro_abundant_type">Abundant</string>
+    <string name="pro_perfect_type">Perfect</string>-->
+    <!--Loading dialog-->
+    <string name="load_title">Loading</string>
+    <string name="load_message">Please wait…</string>
+    <!--Components dialog-->
+    <string name="components_title">All factors:</string>
+    <!--SemiFactor dialog-->
+    <string name="semi_factors">Factors:</string>
+    <string name="first_semi_factor">First: </string>
+    <string name="second_semi_factor">Second: </string>
+
+    <!--Properties fragment-->
+    <string-array name="prop_paragraphs">
+        <item>Divisibility criteria</item>
+       <!-- <item>Square of a number ending in 5</item>-->
+        <item>Sequences</item>
+        <item>Number systems</item>
+        <item>Kinds of numbers</item>
+        <item>Trigonometric properties</item>
+        <item>Logarithmic properties</item>
+        <item>Power properties</item>
+        <item>Properties of derivatives</item>
+        <item>Properties of integrals</item>
+        <item>Probability</item>
+    </string-array>
+
+    <!--Algorithms fragment-->
+    <string-array name="algo_paragraphs_title">
+        <item>Greater Common Divisor</item>
+        <item>Checking a number for simplicity</item>
+        <item>Sieve of Eratosthenes</item>
+        <item>Exponentiation</item>
+        <item>Finding Fibonacci numbers</item>
+        <item>RGB</item>
+    </string-array>
+
+    <string-array name="algo_paragraphs_desc">
+        <item>All ways</item>
+        <item>All ways</item>
+        <item>Find all prime numbers between 2 and n</item>
+        <item>Fast</item>
+        <item>Simple methods</item>
+        <item>Getting a color from a number</item>
+    </string-array>
+
+    <!--AlgoItems-->
+    <string name="gcd_text1"><![CDATA[
+
+<b>Greatest common factor</b> of two integers a and b are called the largest natural numbers d such that a is divisible by d and b is divisible by d.<br><br>
+
+The greatest common divisor exists and is uniquely determined if at least one of the numbers m or n is not zero.<br><br>
+
+<b>Naive algorithm for finding GCD:</b><br>
+In a naive way, we assume that we know the prime factorizations of the numbers a and b. We just need to make an intersection of the two divisor lists.<br>The time complexity: is the minimum length of the lists.<br><br>
+<b>Subtraction Algorithm:</b><br>
+It can be formulated as follows:<br>
+If two natural numbers a and b are given, then while a is not equal to b, you need to subtract the smaller from the larger. Then we have 2 outcomes:<br>
+1) In the process of subtractions, one of our numbers became one, and the other did not, which means that GCD = 1.<br>
+2) In the process of subtractions, one number became equal to another - this number is the GCD of our numbers<br>
+The time complexity: O (n).<br><br>
+<b>Euclid\'s Algorithm:</b><br>
+It can be formulated as follows:<br>
+If you are given two natural numbers a and b, then until a is equal to b or one of the numbers is not equal to one, you need to continue division with the remainder, i.e. take the remainder of dividing (mod) a larger number by a smaller one and write it to a larger one. As in the previous algorithm, if one of the numbers becomes equal to one, then this is the GCD.<br>
+The time complexity: O (log (min(a, b)))
+
+    ]]></string>
+    <string name="prime_algo_text1"><![CDATA[
+<b>First way:</b>
+To check the number n for simplicity, you need to go over all numbers from 2 to n-1. If it is divisible by at least one of them, then it is not simple.<br>
+Time Complexity: O (n).<br><br>
+<b>Second way:</b><br>
+To check the number n for simplicity, you need to go over all numbers from 2 to the square root of n.<br>
+Time Complexity: O (sqrt(n)).
+    ]]></string>
+    <string name="sieve_algo_text1"><![CDATA[
+This algorithm finds all primes from 2 to n.<br>
+1) Write out all the numbers from 2 to n<br>
+2) Take the first number (in order), let it be p, and cross out all other numbers starting with 2p that are divisible by p.<br>
+3) After we have done this, find the first uncrossed number greater than p and repeat step 2.<br>
+4) Repeat until p is greater than n.<br>
+5) All remaining numbers are prime.<br><br>
+This algorithm can be improved by the fact that in step 3 you can start deleting not with 2p, but with p ^ 2. Accordingly, the algorithm can be stopped when p ^ 2 becomes greater than n.
+    ]]></string>
+    <string name="fast_exp_text1"><![CDATA[
+<b>Fast exponentiation algorithm</b> - an algorithm designed to raise a number x to a natural power n in fewer multiplications than is required in the definition.<br>
+Pseudocode:<br><br>
+function Power(value, pow: int): int<br>
+ &#160;&#160;int result = 1<br>
+ &#160;&#160;while (pow > 0)<br>
+  &#160; &#160;&#160;&#160; if pow mod 2 == 1<br>
+     &#160;&#160;&#160;&#160;&#160;&#160; result *= value<br>
+  &#160; &#160;&#160;&#160; value *= value<br>
+  &#160; &#160;&#160;&#160; pow /= 2;<br>
+ &#160;&#160; return result;<br>
+    ]]></string>
+    <string name="fib_main_text1">
+        <![CDATA[
+The simplest algorithms for finding the fibonacci number n are:<br>
+<b>1) Recursive solution</b><br>
+Pseudocode:<br>
+int fib (int n) {<br>
+&#160;if (n &lt;2) return n;<br>
+&#160;else return fib (n-1) + fib (n-2);<br>
+}<br>
+This method is very simple, but it takes (fi) ^ n time, where <i>fi is the golden ratio.</i><br><br>
+<b>2) Dynamic solution:</b><br>
+Pseudocode:<br>
+int fib (int n) {<br>
+&#160;if (n &lt;= 2) return 1;<br>
+&#160;int [] array = new int [n + 1];<br>
+&#160;array [1] = 1;<br>
+&#160;array [2] = 1;<br>
+&#160;for (int i = 3; i &lt;= n; i ++) {<br>
+&#160;&#160;array [i] = array [i-1] + array [i-2];<br>
+&#160;}<br>
+&#160;return array [n];<br>
+}<br>
+This method is more complicated than the previous one, but it already requires O (n) time and O (n) memory.<br><br>
+<b>3) An elegant solution:</b><br>
+Pseudocode:<br>
+int fib (int n){<br>
+&#160;int x = 1;<br>
+&#160;int y = 0;<br>
+&#160;for (int i = 0; i &lt; n; i ++)<br>
+&#160;{<br>
+&#160;&#160;x + = y;<br>
+&#160;&#160;y = x - y;<br>
+&#160;}<br>
+&#160;return y;<br>
+}<br>
+This solution requires O (n) time, but already O (1) memory.
+        ]]>
+    </string>
+    <string name="rgb_text1"><![CDATA[
+<b>RGB</b> is a color coding color model where the primary colors are red, green and blue, respectively.<br><br>
+To get RGB, you need to translate the desired number into a hexadecimal number system <i>(remember that RGB can encode only 2 ^ 24 colors and if the desired number is greater than this, then you need to find the remainder of dividing this number by 2 ^ 24 and use the result).</i><br><br>
+After converting the number to the hexadecimal number system, you need to put zeros in front of the number if the number has less than 6 digits. It remains to put a lattice in front of the number.<br><br>
+Let\'s say we got the number # 3221A1, then 32 is responsible for red, 21 is for green, and A1 is for blue.
+    ]]></string>
+
+
+
+
+    <!--Properties Fragment Item Info-->
+    <string name="div_crit_text">
+<![CDATA[
+<b>A number is divisible by 2</b> if and only if its last digit is divisible by 2, that is, it is even.<br><br>
+<b>A number is divisible by 3</b> if and only if the sum of its digits is divisible by 3.<br><br>
+<b>A number is divisible by 4</b> if and only if its last two digits make up a number that is divisible by 4. A two-digit number is divisible by 4 if and only if the doubled digit in the tens place added with the digit in the ones place is divisible by 4.<br><br>
+<b>A number is divisible by 5</b> when the last digit is divisible by 5, i.e. if it is 0 or 5.<br><br>
+<b>A number is divisible by 6</b> if and only if it is divisible by both 2 and 3, that is, if it is even and the sum of its digits is divisible by 3. Another sign of divisibility: the number is divisible by 6 if and only if the quadruple number of tens added to the ones digit is divided by 6.<br><br>
+1) <b>A number is divisible by 7</b> when the threefold number of tens added to the digit in the ones place is divisible by 7.<br>
+2) <b>A number is divisible by 7</b> if and only if the modulus of the algebraic sum of numbers forming odd groups of three digits (starting with ones), taken with a "+" sign, and even ones with a "-" sign is divisible by 7.<br>
+3) <b>A number is divided by 7</b>, if the difference between the number consisting of the last three digits of the given number and the number formed from the remaining digits of the given number (that is, without the last three digits) is divisible by 7, then this number is divided by 7.<br><br>
+<b>A number is divisible by 8</b> when the last three digits are divisible by 8. A three-digit number is divisible by 8 if and only if a digit in the ones place, added with a double digit in the tens place and a quadruple in the hundreds place, is divisible by 8.<br><br>
+<b>A number is divisible by 9</b> when the sum of its digits is divisible by 9. For example, the sum of the digits of 12345678 is divisible by 9, hence the number itself is divisible by 9.<br><br>
+<b>A number is divisible by 10</b> if and only if it ends in zero.<br><br>
+1) <b>A number is divisible by 11</b> if and only if the modulus of the difference between the sum of the digits occupying odd positions and the sum of the digits occupying even places is divisible by 11.<br>
+2) <b>A number is divisible by 11</b> if and only if the sum of the numbers that form groups of two digits (starting with ones) is divided by 11.<br><br>
+1) <b>A number is divisible by 13</b> when the sum of the four-digit tens in the ones place is divided by 13.<br>
+2) <b>A number is divisible by 13</b> when the sum of the four-digit tens in the ones place is divisible by 13.<br>
+3) <b>A number is divisible by 13</b> if the difference between the number consisting of the last three digits of the given number and the number formed from the remaining digits of the given number (that is, without the last three digits) is divided by 13.
+]]>
+    </string>
+
+    <string name="sequences_1"><![CDATA[
+<b>An arithmetic progression</b> is a numerical sequence, each term of which is equal to the previous one, added with the same number. This number is called the difference of the arithmetic progression and is denoted by d.
+    ]]>
+Arithmetic progression formula:</string>
+    <string name="sequences_2">Sum of arithmetic progression:</string>
+    <string name="sequences_3">The sum of the first n natural numbers is expressed by the formula:</string>
+    <string name="sequences_4"><![CDATA[
+<b>Geometric progression</b> - a sequence of nonzero numbers b1, b2, b3, in which each subsequent number starting from the second is obtained from the previous one by multiplying it by some nonzero number q (called the denominator of the progression)
+Any member of a geometric progression can be calculated by the formula:
+    ]]></string>
+    <string name="sequnces_5"><![CDATA[
+If b1, q> 0, the progression is an increasing sequence, if 0 <q <1, it is a decreasing sequence, and for q <0 it is alternating with signs, and for q = 1 it is stationary.
+    ]]></string>
+    <string name="sequence_6">The product of the first n terms of a geometric progression can be calculated using the formula:</string>
+    <string name="sequence_7">The sum of the first n terms of a geometric progression:</string>
+    <string name="sequence_8"><![CDATA[
+<b>Fibonacci sequence</b> - a numerical sequence in which each subsequent number is equal to the sum of the two previous ones (where F0 = 0 and F1 = 1). It is given by the recursive formula:
+    ]]></string>
+    <string name="sequence_9">Binet\'s formula:</string>
+    <string name="sequence_10">For any n, it is true:</string>
+    <string name="sequence_11">The greatest common divisor of two Fibonacci numbers is equal to the Fibonacci number with an index equal to the greatest common divisor of indices:</string>
+
+    <string name="num_systems_text">
+        <![CDATA[
+<b>A number system</b> is a system of writing numbers using a specific set of numbers (which depend on the base of the system). The most common number systems (bases) are binary (2), octal (8), decimal (10) and hexadecimal (16).<br>
+The minimum base is 2, the maximum base is 36.<br>
+In a base n number, there cannot be a digit greater than or equal to n.<br>
+There are 2 ways to convert from decimal to others:<br>
+1)<b>Sequential division (the process of division is performed until the remainder of the remaining number is less than the base of the number)</b><br>
+2)<b>Finding the nearest number of the degree of base not exceeding the current one with subsequent subtraction.</b><br>
+Explanation for the second method:<br>
+1) Take the number 326 and translate it into a ternary number system.<br>
+2) The closest number not exceeding 326 is 243 (remember that this is 3 to 5 degrees).<br>
+3) Subtract 326 - 243 = 83 - the current number.<br>
+4) The closest number not exceeding 83 is 81 (remember that this is 3 to 4 degrees).<br>
+5) Subtract 83 - 81 = 2 - the current number.<br>
+6) 2 does not exceed the degree of the base.<br>
+7) Therefore, we have one at the fifth and fourth positions, as well as the number 2 at the zero position, the desired number 110002 (the numbering of positions starts from right to left starting from 0).<br><br>
+Conversion to the decimal number system is carried out according to the following algorithm:<br>
+1) Take a number with a numeral system n, put down positions starting from right to left from 0. (Let\'s translate 110002 from ternary)<br>
+2) The corresponding digits in the number are multiplied by the base in the power of the position, all these sums are added. (1 * 3 ^ 5 + 1 * 3 ^ 4 + 0 * 3 ^ 3 + 0 * 3 ^ 2 + 0 * 3 ^ 1 + 2 * 3 ^ 0 = 326 is the desired number)<br>
+In number systems with a base greater than 10, in addition to digits, Latin letters are used, so for example, in the hexadecimal system, the letters correspond to the following numbers in decimal: A - 10, B - 11, C - 12, D - 13, E - 14, F - 15.
+    ]]>
+    </string>
+
+    <string name="num_kinds_text1">
+
+       <![CDATA[
+ <b>A prime number</b> is a natural number that has exactly 2 different divisors - one and itself. Natural numbers that are greater than one and are not prime are called composite.<br>
+        <b>Properties:</b><br>
+1) If p is prime and p divides ab, then p divides a or b.<br>
+2) If p is prime and a is natural, then (a ^ p) - a is a multiple of p.<br>
+3) Natural p> 1 is simple if and only if (p-1)! + 1 is divisible by p.<br>
+4) If n> 1 is a natural number, then there exists p - a prime number such that n> p> 2n.<br>
+5) Any prime number greater than 3 can be represented as 6k - 1 or 6k + 1.<br>
+6) If p> 3 is prime, then (p ^ 2) - 1 is a multiple of 24.<br><br>
+<b>A semi-prime number</b> is a natural number represented as a product of two primes.<br>
+<b>Properties:</b><br>
+1) Any prime number is semi-prime.<br>
+2) Every sufficiently large odd natural number can be represented as the sum of three semiprime numbers.<br>
+       ]]>
+
+    </string>
+    <string name="num_kinds_text2"><![CDATA[
+<b>Friendly numbers</b> are a pair of different natural numbers for which the sum of all proper divisors of the first number is equal to the second number and vice versa, the sum of all proper divisors of the second number is equal to the first number.<br>
+<b>Properties:</b><br>
+If for a natural number n> 1 all three numbers:
+    ]]></string>
+    <string name="num_kinds_text3"><![CDATA[
+are prime, then the numbers (2 ^ n) pq and (2 ^ n) r form a pair of friendly numbers.<br><br>
+<b>Insufficient numbers</b> are natural numbers, the sum of their own divisors is less than the number itself.<br><br>
+<b>Excessive numbers</b> are natural numbers, the sum of their own divisors is greater than the number itself.<br><br>
+<b>Semi-perfect numbers</b> are natural numbers, the sum of all or some of the proper divisors of which coincides with this number itself.<br>
+<b>Properties:</b><br>
+Every perfect number is a semi-perfect number.<br>
+Every perfect number is a semi-perfect number.<br>
+Any number that is a multiple of a semi-perfect number is also semi-perfect.<br><br>
+<b>Perfect numbers</b> are natural numbers, the sum of all proper divisors of which coincides with this number.
+    ]]></string>
+
+    <string name="trig_text1">
+
+        <![CDATA[
+<b>Sinus</b> is the ratio of the opposite leg to the hypotenuse.<br>
+<b>Cosine</b> is the ratio of the adjacent leg to the hypotenuse.<br>
+<b>Tangent</b> - the ratio of the opposite leg to the adjacent one.<br>
+<b>Cotangent</b> - the ratio of the adjacent leg to the opposite one.<br>
+<b>Secant</b> is the ratio of the hypotenuse to the adjacent leg.<br>
+<b>Cosecant</b> is the ratio of the hypotenuse to the opposite leg.<br>
+<b>Sine properties:</b><br>
+The scope is from -1 to 1.<br>
+Sine is an odd function (sin (-x) = - sin (x)).<br>
+It is a periodic function.<br>
+<b>Cosine properties:</b><br>
+The scope is from -1 to 1.<br>
+The cosine is an even function (cos (-x) = cos (x)).<br>
+It is a periodic function.<br>
+<b>Tangent properties:</b><br>
+Scope - entire numeric axis<br>
+The tangent is an odd function (tg (-x) = - tg (x)).<br>
+It is a periodic function.<br>
+<b>Cotangent property:</b><br>
+Scope - entire numeric axis<br>
+The cotangent is an odd function (ctg (-x) = - ctg (x)).<br>
+It is a periodic function.<br>
+<b>Basic identities and formulas:</b><br>
+        ]]>
+
+    </string>
+    <string name="trig_text2">
+        <![CDATA[
+<b>Sinus theorem.</b><br>
+The sides of the triangle are proportional to the sines of the opposite angles (R is the radius of the circle circumscribed around the triangle):
+        ]]>
+    </string>
+    <string name="trig_text3">
+        <![CDATA[
+        <b>Cosine theorem.</b><br>
+The square of the side of a triangle is equal to the sum of the squares of the other two sides minus twice the product of these sides by the cosine of the angle between them:
+        ]]>
+    </string>
+    <string name="trig_text4"><![CDATA[
+<b>Euler\'s formula (where e is Euler\'s number, i is the imaginary unit):</b>
+    ]]></string>
+    <string name="trig_text5"><![CDATA[
+<b>Other properties:</b>
+    ]]></string>
+
+    <string name="log_text1"><![CDATA[
+<b>The logarithm</b> of the number b to the base a, is defined as the exponent to which the base a must be raised to get the number b.
+    ]]></string>
+    <string name="log_text2">The real logarithm of a number b to base a makes sense for a> 0, a is not equal to 1, b> 0. The logarithm with a base equal to Euler\'s number is denoted - ln (a).</string>
+    <string name="log_text3"><![CDATA[
+<b>Properties:</b>
+    ]]></string>
+
+    <string name="power_text1"><![CDATA[<b>Main properties of the power:</b>]]></string>
+    <string name="power_text2"><![CDATA[<b>Integer power:</b>]]></string>
+    <string name="power_text3"><![CDATA[<b>Real power:</b>]]></string>
+
+    <string name="deriv_text1"><![CDATA[
+<b>The derivative of a function</b> is defined as the limit of the ratio of the increment of a function to the increment of its argument when the increment of the argument tends to zero, if such a limit exists.
+    ]]></string>
+    <string name="deriv_text2"><![CDATA[
+Derivatives of basic functions:
+    ]]></string>
+    <string name="deriv_text3"><![CDATA[
+<b>The geometric meaning of the derivative</b> is the tangent of the slope of the tangent line to the function.<br>
+<b>The physical meaning of a derivative</b> is the rate of change of a function.
+    ]]></string>
+    <string name="deriv_text4"><![CDATA[
+    <b>Differentiation rules:</b>
+    ]]></string>
+    <string name="deriv_text5"><![CDATA[
+<b>If the function is specified parametrically,</b>
+    ]]></string>
+    <string name="deriv_text6"><![CDATA[
+<b>then:</b>
+    ]]></string>
+
+    <string name="integral_text1"><![CDATA[
+<b>Integral</b> is one of the most important concepts of mathematical analysis. A problem is required to solve a large class (including finding the area under a curve). Simplified, the integral can be represented as an analogue of the sum for an infinite number of infinitesimal terms.
+    ]]></string>
+    <string name="integral_text2"><![CDATA[
+<b>Properties:</b>
+    ]]></string>
+    <string name="integral_text3">The integral of one over the interval [a, b] is equal to the length of this interval:</string>
+    <string name="integral_text4">The constant factor can be taken outside the integral sign:</string>
+    <string name="integral_text5">The integral of the algebraic sum of integrable functions is equal to the algebraic sum of integrals:</string>
+    <string name="integral_text6">When interchanging the limits of integration, the integral changes its sign to the opposite:</string>
+    <string name="integral_text7">If the function f (x) is integrable on each of the intervals [a, b], [a, c] and [c, b], then</string>
+    <string name="integral_text7_">The product inside the integral:</string>
+    <string name="integral_text8"><![CDATA[
+<b>Integrals of basic functions:</b>
+    ]]></string>
+
+    <string name="prob_text1"><![CDATA[
+<b>The formula for the number of permutations:</b>
+    ]]></string>
+    <string name="prob_text2"><![CDATA[
+Sample question:<br>
+How many ways can n objects be rearranged?<br>
+    ]]></string>
+    <string name="prob_text3"><![CDATA[
+<b>Placement formula:</b>
+    ]]></string>
+    <string name="prob_text4"><![CDATA[
+Sample question:<br>
+How many ways can you select m objects (out of n objects) and rearrange them in each sample?<br>
+    ]]></string>
+    <string name="prob_text5"><![CDATA[
+<b>Combination formula:</b>
+    ]]></string>
+    <string name="prob_text6"><![CDATA[
+Sample question:<br>
+How many ways can you choose m objects out of n?<br>
+    ]]></string>
+    <string name="prob_text7"><![CDATA[<b>The formula for combining with repetitions:</b>
+    ]]></string>
+    <string name="prob_text8"><![CDATA[
+Sample question:<br>
+There are n sets to choose from, each of which consists of identical objects. How many ways can you select m objects?<br>
+    ]]></string>
+    <string name="prob_text9"><![CDATA[
+<b>Permutation formula with repetitions:</b>
+    ]]></string>
+    <string name="prob_text10"><![CDATA[
+Sample question:<br>
+The number of ways that n objects can be rearranged, among which the 1st object is repeated k1 times, the 2nd object is repeated k2 times, and so on?<br>
+    ]]></string>
+    <string name="prob_text11"><![CDATA[
+<b>Formula for number of placements with repetitions:</b>
+    ]]></string>
+    <string name="prob_text12"><![CDATA[
+Sample question:<br>
+A set of n objects is given, and any object can be selected repeatedly. How many ways can you select m objects if the order of their arrangement in the selection is important?<br>
+    ]]></string>
+
+
+    <!--CongratulationString-->
+    <string name="congrat_send">Send</string>
+    <string name="congrat">Congratulations! You are the best! Please, enter your mail and press "Send". Within a week you will be contacted (by this mail) to receive the prize.</string>
+
+
+
+    <!--FullVersion activity-->
+    <string name="fv_no_ads">No ADS</string>
+    <string name="fv_full_access">Full access to all materials</string>
+    <string name="fv_upgrade">Upgrade to full version</string>
+
+    <!--Lottery Fragment-->
+    <string name="lottery_header">Everyday Challenge</string>
+    <string name="lottery_title">Try to guess a number between 100 and 1,000,000 first time and get $ 15</string>
+    <string name="lottery_button">Guess</string>
+    <string name="lottery_dialog_error">Error</string>
+</resources>

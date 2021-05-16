@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/mainColor">
+
+    <ImageButton
+        android:id="@+id/lottery_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_menu_24_white"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:text="@string/lottery_header"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:text="@string/lottery_title"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/enter_number_guess_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_back"
+            android:textColor="@color/white"
+            android:textColorLink="@android:color/transparent"
+            android:textColorHint="@color/white"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:padding="5dp"
+            android:maxLength="6"
+            android:layout_marginTop="10dp"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/guess_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/lottery_button"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
